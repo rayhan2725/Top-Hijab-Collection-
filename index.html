@@ -1,0 +1,2076 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Hijab Collection</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #f7f8fa;
+            --text-black: #111111;
+            --brand-blue: #3b49df;
+            --brand-blue-hover: #2f3bc3;
+            --gold-color: #d4af37;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --search-bg: #f9fafb;
+            --bottom-nav-bg: #ffffff;
+            --footer-bg: #11141c;
+            --error-color: #e53e3e;
+            --success-color: #38a169;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-black: #f1f1f1;
+            --brand-blue: #5b67f1;
+            --brand-blue-hover: #3b49df;
+            --gold-color: #f3e5ab;
+            --card-bg: #1e1e1e;
+            --border-color: #2c2c2c;
+            --search-bg: #222222;
+            --bottom-nav-bg: #181818;
+            --footer-bg: #0b0d12;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-black);
+            padding-bottom: 70px;
+        }
+
+        .shop-lighting-header {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            padding: 15px 10px;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 2px solid var(--gold-color);
+        }
+
+        .rgb-neon-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rgbNeonGlow 6s linear infinite;
+        }
+
+        @keyframes rgbNeonGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 16px;
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .menu-btn, .header-right a, .theme-toggle-btn {
+            font-size: 18px;
+            color: var(--text-black);
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .logo-container a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-logo-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .logo-text-main {
+            font-size: 17px;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 480px) {
+            .logo-text-main {
+                font-size: 13px;
+            }
+            .brand-logo-img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        .header-right {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -6px;
+            right: -8px;
+            background: #ffcc00;
+            color: #111;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 2px 5px;
+            border-radius: 50%;
+        }
+
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        .search-container {
+            padding: 12px 16px;
+            background: var(--card-bg);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--search-bg);
+            border-radius: 30px;
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .search-box i {
+            color: #717784;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            font-size: 13px;
+            color: var(--text-black);
+        }
+
+        .welcome-handwritten {
+            text-align: center;
+            padding: 12px 10px 4px 10px;
+            background: var(--card-bg);
+        }
+
+        .hero-section {
+            padding: 10px 16px 12px 16px;
+            background: var(--card-bg);
+            text-align: center;
+        }
+
+        .banner-top-logo-container {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .banner-top-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero-banner {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 16px 10px 16px;
+        }
+
+        .section-title h2 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-black);
+            text-transform: uppercase;
+        }
+
+        .section-title p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 13px;
+            color: var(--gold-color);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            padding: 0 16px 15px 16px;
+        }
+
+        @media (max-width: 600px) {
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .cat-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .cat-card img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .cat-card h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 8px;
+            color: var(--text-black);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            padding: 0 16px 20px 16px;
+        }
+
+        @media (min-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            cursor: pointer;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 12px;
+            text-align: left;
+        }
+
+        .product-info h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-black);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--gold-color);
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart-btn {
+            background-color: var(--text-black);
+            color: var(--bg-color);
+            border: none;
+            width: 100%;
+            padding: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .add-to-cart-btn:hover {
+            opacity: 0.85;
+        }
+
+        .product-detail-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .product-image-grid {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-image-grid img {
+            width: calc(25% - 8px);
+            min-width: 100px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            cursor: zoom-in;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-image-grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        @media screen and (max-width: 768px) {
+            .product-image-grid {
+                flex-wrap: wrap;
+            }
+            .product-image-grid img {
+                width: calc(50% - 6px);
+                height: 180px;
+            }
+        }
+
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .image-modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 8px;
+            animation: zoomAnim 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes zoomAnim {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #f1f1f1;
+            font-size: 45px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .image-modal-close:hover {
+            color: var(--gold-color);
+        }
+
+        .product-detail-info h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-black);
+            margin-bottom: 10px;
+        }
+
+        .product-detail-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold-color);
+            margin-bottom: 15px;
+        }
+
+        .product-detail-desc {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-black);
+            margin-bottom: 15px;
+        }
+
+        .page-container {
+            max-width: 600px;
+            margin: 25px auto;
+            background: var(--card-bg);
+            padding: 30px 24px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+            text-align: left;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--text-black);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            background: var(--search-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-black);
+            font-size: 13px;
+            outline: none;
+        }
+
+        .account-btn {
+            background-color: #111;
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .create-account-box-btn {
+            background: transparent;
+            color: var(--brand-blue);
+            border: 1px solid var(--brand-blue);
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+        }
+
+        .custom-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .custom-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .custom-modal-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            width: 90%;
+            max-width: 380px;
+            padding: 25px 20px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transform: scale(0.8);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .custom-modal-overlay.active .custom-modal-box {
+            transform: scale(1);
+        }
+
+        .custom-modal-icon {
+            font-size: 40px;
+            color: var(--gold-color);
+            margin-bottom: 15px;
+        }
+
+        .custom-modal-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-black);
+            margin-bottom: 8px;
+        }
+
+        .custom-modal-message {
+            font-size: 13px;
+            color: #717784;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .custom-modal-btn {
+            background: var(--text-black);
+            color: var(--bg-color);
+            border: none;
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .policy-content h2, .policy-content h3 {
+            font-size: 15px;
+            color: var(--gold-color);
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .policy-content p, .policy-content ul {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--text-black);
+            margin-bottom: 12px;
+        }
+
+        .policy-content ul {
+            padding-left: 20px;
+        }
+
+        .site-footer {
+            background-color: var(--footer-bg);
+            color: #f1f1f1;
+            padding: 50px 20px 20px 20px;
+            margin-top: 40px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            margin-bottom: 18px;
+            color: var(--gold-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul li a {
+            color: #99a1af;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 35px auto 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            font-size: 12px;
+            color: #717784;
+        }
+
+        .floating-live-chat {
+            position: fixed;
+            bottom: 75px;
+            right: 16px;
+            background: #25d366;
+            color: #ffffff;
+            padding: 10px 16px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 998;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        .sidebar-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .sidebar-menu {
+            position: fixed;
+            top: 0;
+            left: -280px;
+            width: 280px;
+            height: 100%;
+            background: var(--card-bg);
+            transition: 0.3s;
+            z-index: 1001;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-overlay.active .sidebar-menu {
+            left: 0;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: var(--text-black);
+        }
+
+        .sidebar-links {
+            list-style: none;
+            padding: 10px 0;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+
+        .sidebar-links li a {
+            display: block;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: var(--text-black);
+            font-size: 14px;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 500;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--bottom-nav-bg);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid var(--border-color);
+            z-index: 999;
+        }
+
+        .nav-item {
+            text-align: center;
+            text-decoration: none;
+            color: #717784;
+            font-size: 11px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            flex: 1;
+        }
+
+        .nav-item i {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 3px;
+        }
+
+        .nav-item.active {
+            color: var(--gold-color);
+            font-weight: 600;
+        }
+
+        .payment-options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .payment-option-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--search-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 10px 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .payment-option-card.selected {
+            border-color: var(--gold-color);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .payment-option-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .payment-option-info img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .payment-option-info span {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-black);
+        }
+
+        .copy-btn {
+            background: var(--gold-color);
+            color: #111;
+            border: none;
+            padding: 3px 8px;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .copy-btn:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="shop-lighting-header">
+        <div class="rgb-neon-text" style="font-size: 16px; letter-spacing: 1.5px;">✨ Top Hijab Collection ✨</div>
+    </div>
+
+    <header class="main-header">
+        <button class="menu-btn" id="openMenu"><i class="fa-solid fa-bars"></i></button>
+        
+        <div class="logo-container">
+            <a href="#" onclick="switchPage('home', event)">
+                <img src="https://i.ibb.co/Z650JJc0/Messenger-creation-4-FE81-C6-B-2823-43-B6-A137-5-BF82-ABFC88-B.jpg" alt="Logo" class="brand-logo-img">
+                <span class="logo-text-main rgb-neon-text">Top Hijab Collection</span>
+            </a>
+        </div>
+
+        <div class="header-right">
+            <button class="theme-toggle-btn" id="themeToggle" title="Toggle Dark/Light Mode">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
+            <a href="#" onclick="switchPage('cart', event)" title="Bag / Cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-badge" id="cartBadgeCount">0</span></a>
+        </div>
+    </header>
+
+    <!-- HOME PAGE SECTION -->
+    <div id="home-page" class="page-section active">
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="main-search-input" placeholder="Search for hijabs, abayas..." oninput="handleLiveSearch(this.value)">
+            </div>
+        </div>
+
+        <div id="live-search-results-container" style="display: none; padding: 0 16px 15px 16px;">
+            <div class="section-header" style="padding: 10px 0;">
+                <div class="section-title">
+                    <h2>Search Results</h2>
+                </div>
+            </div>
+            <div id="live-search-grid" class="products-grid" style="padding: 0;"></div>
+        </div>
+
+        <div class="welcome-handwritten">
+            <h2 class="rgb-neon-text" style="font-size: 22px;">Welcome to Top Hijab Collection ✨</h2>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="banner-top-logo-container">
+                <img src="https://i.ibb.co/Z650JJc0/Messenger-creation-4-FE81-C6-B-2823-43-B6-A137-5-BF82-ABFC88-B.jpg" alt="Logo" class="banner-top-logo">
+            </div>
+            <div class="hero-banner">
+                <img src="https://i.ibb.co/v4LPFHw9/file-000000009c7c81f4aca30779de54f002.png" alt="Banner">
+            </div>
+        </section>
+
+        <!-- CATEGORIES SECTION -->
+        <div class="section-header" style="padding-top: 5px;">
+            <div class="section-title">
+                <h2>Our Collections 👑</h2>
+            </div>
+        </div>
+
+        <div class="category-grid">
+            <div class="cat-card" onclick="filterShopCategory('Hijab')">
+                <img src="https://i.ibb.co/Wpd6t8gn/file-0000000092c48210a2b5d10c73c2962a.png" alt="Hijab Collection">
+                <h3>🌸 Hijab Collection</h3>
+            </div>
+            <div class="cat-card" onclick="filterShopCategory('Borka')">
+                <img src="https://i.ibb.co/NgNWbqd9/file-0000000074ac824390436ca8d163a52c.png" alt="Borka Collection">
+                <h3>🌸 Borka Collection</h3>
+            </div>
+            <div class="cat-card" onclick="filterShopCategory('Abaya')">
+                <img src="https://i.ibb.co/v41dk3RW/file-000000009bc881f4a75d6a03eb79d390.png" alt="Abaya Collection">
+                <h3>🌸 Abaya Collection</h3>
+            </div>
+        </div>
+
+        <!-- FEATURED PRODUCTS SECTION -->
+        <div class="section-header">
+            <div class="section-title">
+                <h2>Featured Products ⭐</h2>
+            </div>
+        </div>
+        <div class="products-grid" id="home-products-grid"></div>
+    </div>
+
+    <!-- SHOP PAGE SECTION -->
+    <div id="shop-page" class="page-section">
+        <div class="section-header" style="padding: 20px 16px 15px 16px;">
+            <div class="section-title">
+                <h2 id="shop-page-title">All Products 🛍️</h2>
+                <p>Browse our premium selection</p>
+            </div>
+            <button onclick="filterShopCategory('All')" class="add-to-cart-btn" style="width: auto; padding: 6px 12px; font-size: 11px;">Show All</button>
+        </div>
+        <div class="products-grid" id="shop-products-grid"></div>
+    </div>
+
+    <!-- PRODUCT DETAIL PAGE SECTION -->
+    <div id="product-detail-page" class="page-section">
+        <div style="padding: 10px 16px;">
+            <button onclick="switchPage('home', event)" class="add-to-cart-btn" style="width: auto; padding: 6px 12px; font-size: 11px; margin-bottom: 15px;"><i class="fa-solid fa-arrow-left"></i> Back to Home</button>
+            <div class="product-detail-container" id="product-detail-content"></div>
+        </div>
+    </div>
+
+    <!-- CART PAGE SECTION -->
+    <div id="cart-page" class="page-section">
+        <div class="page-container" style="max-width: 600px; text-align: left;">
+            <div class="rgb-neon-text" style="font-size: 20px; margin-bottom: 15px; text-align: center;">Shopping Cart & Checkout</div>
+            
+            <div id="cart-items-container" style="padding: 10px 0;">
+                <p style="color: #717784; font-size: 14px; text-align: center;">Your cart is empty.</p>
+            </div>
+
+            <!-- BILLING & CHECKOUT SECTION -->
+            <div id="checkout-section" style="display: none; margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                <h3 style="font-size: 15px; color: var(--gold-color); margin-bottom: 12px; font-weight: 600;">Delivery & Shipping</h3>
+                
+                <div class="form-group">
+                    <label>Shipping Area *</label>
+                    <select id="shipping-area" onchange="handleShippingChange()">
+                        <option value="60">Inside Feni (৳60)</option>
+                        <option value="130">Outside Feni (৳130)</option>
+                    </select>
+                </div>
+
+                <h3 style="font-size: 15px; color: var(--gold-color); margin: 20px 0 12px 0; font-weight: 600;">Customer Information</h3>
+                
+                <form id="checkout-form" onsubmit="proceedToCheckout(event)">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="checkout-name" placeholder="আপনার পুরো নাম" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" id="checkout-phone" placeholder="০১XXXXXXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label>City *</label>
+                        <input type="text" id="checkout-city" placeholder="শহর বা এলাকা" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Zila (জেলা) *</label>
+                        <input type="text" id="checkout-zila" placeholder="জেলার নাম" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Post Code (ঐচ্ছিক)</label>
+                        <input type="text" id="checkout-postcode" placeholder="পোস্ট কোড">
+                    </div>
+                    <div class="form-group">
+                        <label>Order Notes (ঐচ্ছিক)</label>
+                        <textarea id="checkout-notes" rows="2" placeholder="অর্ডার সম্পর্কিত কোনো বিশেষ নির্দেশনা থাকলে লিখুন"></textarea>
+                    </div>
+                    
+                    <!-- PAYMENT METHOD SECTION WITH LOGOS -->
+                    <div class="form-group">
+                        <label>Payment Method *</label>
+                        <input type="hidden" id="payment-method" value="Cash on Delivery">
+                        
+                        <div class="payment-options-grid">
+                            <div class="payment-option-card selected" onclick="selectPaymentMethod('Cash on Delivery', this)">
+                                <div class="payment-option-info">
+                                    <img src="https://i.ibb.co/XNLq3PW/images-1.png" alt="Cash on Delivery">
+                                    <span>Cash on Delivery</span>
+                                </div>
+                                <input type="radio" name="payment_method_radio" checked>
+                            </div>
+
+                            <div class="payment-option-card" onclick="selectPaymentMethod('bKash', this)">
+                                <div class="payment-option-info">
+                                    <img src="https://i.ibb.co/YxhNVFQ/images.png" alt="bKash">
+                                    <span>bKash</span>
+                                </div>
+                                <input type="radio" name="payment_method_radio">
+                            </div>
+
+                            <div class="payment-option-card" onclick="selectPaymentMethod('Nagad', this)">
+                                <div class="payment-option-info">
+                                    <img src="https://i.ibb.co/XrmkjD41/images-1.jpg" alt="Nagad">
+                                    <span>Nagad</span>
+                                </div>
+                                <input type="radio" name="payment_method_radio">
+                            </div>
+
+                            <div class="payment-option-card" onclick="selectPaymentMethod('Rocket', this)">
+                                <div class="payment-option-info">
+                                    <img src="https://i.ibb.co/vtLvX0s/images-2.png" alt="Rocket">
+                                    <span>Rocket</span>
+                                </div>
+                                <input type="radio" name="payment_method_radio">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CASH ON DELIVERY INSTRUCTIONS BOX -->
+                    <div id="cod-banking-info" style="display: block; background: var(--search-bg); padding: 12px; border-radius: 8px; margin-bottom: 18px; border: 1px solid var(--gold-color); font-size: 12px; line-height: 1.6;">
+                        <strong style="color: var(--gold-color);">ক্যাশ অন ডেলিভারি নির্দেশিকা:</strong><br>
+                        <span>ডেলিভারি চার্জ আগে দিতে হবে। পন্যর মূল্য আপনি পন্য সরাসরি দেখে তারপর টাকা দিবেন। ডেলিভারি চার্জ দিবেন আমাদের বিকাশ নাম্বার এ।</span><br>
+                        <div style="margin-top: 8px;">
+                            👉 বিকাশ নম্বর: <strong style="color: var(--gold-color);" id="cod-merchant-phone-num">01765500211</strong> <button type="button" class="copy-btn" onclick="copyCodMerchantNumber()">Copy Number</button> (Personal)
+                        </div>
+                        <div style="margin-top: 8px;">
+                            <button type="button" class="add-to-cart-btn" style="padding: 6px 10px; font-size: 11px; width: auto;" onclick="openBkashPopup()">বিকাশ পেমেন্ট নিয়ম দেখুন 📱</button>
+                        </div>
+                        <div class="form-group" style="margin-top: 10px; margin-bottom: 0;">
+                            <label style="font-size: 11px;">যে নম্বর থেকে ডেলিভারি চার্জ পাঠানো হয়েছে (Sender Number) *</label>
+                            <input type="tel" id="cod-sender-number" placeholder="০১XXXXXXXXX" required>
+                        </div>
+                        <div class="form-group" style="margin-top: 10px; margin-bottom: 0;">
+                            <label style="font-size: 11px;">ট্রানজ্যাকশন আইডি (TrxID) *</label>
+                            <input type="text" id="cod-trx-id" placeholder="যেমন: 9L8A7B6C" required>
+                        </div>
+                    </div>
+
+                    <!-- MOBILE BANKING DETAILS BOX (FOR FULL ADVANCE) -->
+                    <div id="mobile-banking-info" style="display: none; background: var(--search-bg); padding: 12px; border-radius: 8px; margin-bottom: 18px; border: 1px solid var(--gold-color); font-size: 12px; line-height: 1.6;">
+                        <strong style="color: var(--gold-color);" id="payment-gateway-title">পেমেন্ট নির্দেশিকা:</strong><br>
+                        <span id="payment-instruction-text">দয়া করে নিচের নম্বরে আপনার নির্দিষ্ট পরিমাণ টাকা সেন্ড করুন:</span><br>
+                        👉 নম্বর: <strong style="color: var(--gold-color);" id="merchant-phone-num">01765500211</strong> <button type="button" class="copy-btn" onclick="copyMerchantNumber()">Copy Number</button> (Personal)<br>
+                        <div class="form-group" style="margin-top: 10px; margin-bottom: 0;">
+                            <label style="font-size: 11px;">যে নম্বর থেকে টাকা পাঠানো হয়েছে (Sender Number) *</label>
+                            <input type="tel" id="sender-number" placeholder="০১XXXXXXXXX">
+                        </div>
+                        <div class="form-group" style="margin-top: 10px; margin-bottom: 0;">
+                            <label style="font-size: 11px;">ট্রানজ্যাকশন আইডি (TrxID) *</label>
+                            <input type="text" id="trx-id" placeholder="যেমন: 9L8A7B6C">
+                        </div>
+                    </div>
+
+                    <!-- TOTAL CALCULATION BOX -->
+                    <div style="background: var(--search-bg); padding: 15px; border-radius: 8px; margin: 20px 0; border: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px;">
+                            <span>Subtotal (পণ্যের মূল্য):</span>
+                            <span id="cart-subtotal-price">৳0</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px;">
+                            <span>Delivery Charge:</span>
+                            <span id="cart-shipping-price">৳60</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 15px; font-weight: 700; border-top: 1px solid var(--border-color); padding-top: 8px; margin-bottom: 8px;">
+                            <span>Total Product & Shipping:</span>
+                            <span id="cart-total-price" style="color: var(--gold-color);">৳0</span>
+                        </div>
+                        <!-- ADVANCE VS DUE SUMMARY -->
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 10px; border-radius: 6px; border: 1px dashed var(--gold-color); margin-top: 10px;">
+                            <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: var(--gold-color);">
+                                <span id="payable-now-label">Advance Payable Now (ডেলিভারি চার্জ):</span>
+                                <span id="payable-now-amount">৳60</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 12px; margin-top: 4px; color: var(--text-black);">
+                                <span id="payable-later-label">Due on Delivery (ক্যাশ অন ডেলিভারি):</span>
+                                <span id="payable-later-amount">৳0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="account-btn">
+                        Place Order & Send to WhatsApp 🛒
+                    </button>
+                </form>
+            </div>
+
+            <button type="button" class="create-account-box-btn" style="margin-top: 15px;" onclick="switchPage('home', event)">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+
+    <!-- TRACK ORDER PAGE SECTION -->
+    <div id="track-page" class="page-section">
+        <div class="page-container policy-content">
+            <h1>Track Your Order</h1>
+            <p style="text-align: center; color: #717784; font-size: 13px; margin-bottom: 20px;">আপনার অর্ডারের ডেলিভারি স্ট্যাটাস এখন আরও সহজে দেখুন।</p>
+            
+            <p>Top Hijab Collection থেকে আপনার অর্ডারটি আমরা দেশের বিশ্বস্ত ৩টি কুরিয়ার সার্ভিসের যেকোনো একটির মাধ্যমে পাঠিয়ে থাকি।</p>
+            
+            <h3>🚚 Sundarban Courier Service</h3>
+            <p>আপনার পার্সেল Sundarban Courier-এর মাধ্যমে পাঠানো হলে নিচের লিংক থেকে Tracking Number দিয়ে স্ট্যাটাস দেখতে পারবেন।</p>
+            <p>🔗 <strong>Track Sundarban Courier:</strong><br><a href="https://tracking.sundarbancourierltd.com/" target="_blank">https://tracking.sundarbancourierltd.com/</a></p>
+            
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 20px 0;">
+            
+            <h3>🚚 Pathao Courier</h3>
+            <p>আপনার অর্ডার Pathao Courier-এর মাধ্যমে পাঠানো হলে Consignment Number ব্যবহার করে ডেলিভারি স্ট্যাটাস দেখতে পারবেন।</p>
+            <p>🔗 <strong>Track Pathao Courier:</strong><br><a href="https://pathao.com/courier/" target="_blank">https://pathao.com/courier/</a></p>
+            
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 20px 0;">
+            
+            <h3>🚚 Steadfast Courier</h3>
+            <p>আপনার পার্সেল Steadfast Courier-এর মাধ্যমে পাঠানো হলে Tracking Number দিয়ে বর্তমান অবস্থা জানতে পারবেন।</p>
+            <p>🔗 <strong>Track Steadfast Courier:</strong><br><a href="https://steadfast.com.bd/" target="_blank">https://steadfast.com.bd/</a></p>
+            
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 20px 0;">
+            
+            <p>আপনার অর্ডারটি আমরা এই ৩টি কুরিয়ারের মধ্যে যেকোনো একটিতে পাঠাবো। কুরিয়ারে পাঠানোর পর আপনাকে Tracking Number দেওয়া হবে।</p>
+            <p>Tracking Number পাওয়ার পর আপনি আমাদের ওয়েবসাইট থেকে অথবা সংশ্লিষ্ট কুরিয়ার সাইটে গিয়ে আপনার অর্ডারের বর্তমান স্ট্যাটাস দেখতে পারবেন।</p>
+            <p>ধন্যবাদ Top Hijab Collection-এর সাথে থাকার জন্য।</p>
+            
+            <p style="text-align: center; margin-top: 20px;" class="rgb-neon-text">✨ Premium Fashion • Trusted Delivery ✨</p>
+        </div>
+    </div>
+
+    <!-- CUSTOM PREMIUM ALERT MODAL -->
+    <div class="custom-modal-overlay" id="customModalOverlay">
+        <div class="custom-modal-box">
+            <div class="custom-modal-icon">
+                <i class="fa-solid fa-circle-check" id="modalIcon"></i>
+            </div>
+            <div class="custom-modal-title" id="modalTitle">Success</div>
+            <div class="custom-modal-message" id="modalMessage">Registration successful!</div>
+            <button type="button" class="custom-modal-btn" onclick="closeCustomModal()">OK</button>
+        </div>
+    </div>
+
+    <!-- IMAGE ZOOM MODAL -->
+    <div id="imageZoomModal" class="image-modal">
+        <span class="image-modal-close" id="closeImageModal">&times;</span>
+        <img class="image-modal-content" id="zoomedModalImg">
+    </div>
+
+    <!-- STATIC POLICY PAGES -->
+    <div id="about-page" class="page-section">
+        <div class="page-container policy-content">
+            <h1>About Us</h1>
+            <h2 class="rgb-neon-text" style="text-align: center; font-size: 18px; margin-bottom: 15px;">Welcome to Top Hijab Collection ✨</h2>
+            <p>Top Hijab Collection একটি প্রিমিয়াম ইসলামিক ফ্যাশন শপ, যেখানে আমরা নিয়ে এসেছি আধুনিক ও মার্জিত ডিজাইনের <strong>Hijab Collection</strong>, <strong>Borka Collection</strong> এবং <strong>Abaya Collection</strong>।</p>
+            <p>আমাদের লক্ষ্য হলো প্রতিটি নারীর জন্য সুন্দর, আরামদায়ক এবং মানসম্মত ইসলামিক পোশাক সহজে পৌঁছে দেওয়া। আমরা ফ্যাশন, সৌন্দর্য এবং পর্দাশীলতার একটি সুন্দর সমন্বয় তৈরি করতে কাজ করি।</p>
+            
+            <h2>Our Collections 👑</h2>
+            <p>🌸 <strong>Hijab Collection</strong><br>প্রিমিয়াম মানের বিভিন্ন রঙ ও ডিজাইনের হিজাব, যা আপনার প্রতিদিনের ব্যবহার ও বিশেষ মুহূর্তের জন্য উপযুক্ত।</p>
+            <p>🌸 <strong>Borka Collection</strong><br>আকর্ষণীয় ডিজাইন ও আরামদায়ক কাপড়ে তৈরি মার্জিত বোরকা কালেকশন।</p>
+            <p>🌸 <strong>Abaya Collection</strong><br>Elegant ও Premium ডিজাইনের আবায়া, যা আপনাকে দেবে স্টাইলিশ ও আত্মবিশ্বাসী লুক।</p>
+
+            <h2>Why Choose Us? 💎</h2>
+            <ul>
+                <li>Premium Quality Products</li>
+                <li>Latest & Stylish Designs</li>
+                <li>Affordable Price</li>
+                <li>Trusted Online Shopping</li>
+                <li>Fast Delivery Service</li>
+                <li>Customer Satisfaction Priority</li>
+            </ul>
+
+            <h2>Our Mission 🌟</h2>
+            <p>আমাদের উদ্দেশ্য হলো গ্রাহকদের কাছে ভালো মানের ইসলামিক ফ্যাশন পণ্য পৌঁছে দেওয়া এবং একটি বিশ্বস্ত অনলাইন শপ হিসেবে নিজেদের প্রতিষ্ঠিত করা।</p>
+            <p>প্রতিটি অর্ডার আমরা গুরুত্বের সাথে গ্রহণ করি এবং চেষ্টা করি আমাদের কাস্টমারদের সর্বোচ্চ সেবা দিতে।</p>
+        </div>
+    </div>
+    
+    <div id="privacy-page" class="page-section">
+        <div class="page-container policy-content">
+            <h1>Privacy Policy</h1>
+            <h2 class="rgb-neon-text" style="text-align: center; font-size: 18px; margin-bottom: 15px;">Welcome to Top Hijab Collection</h2>
+            <p>আপনার গোপনীয়তা এবং ব্যক্তিগত তথ্যের নিরাপত্তা আমাদের কাছে অত্যন্ত গুরুত্বপূর্ণ। এই Privacy Policy-এর মাধ্যমে আমরা জানাচ্ছি কীভাবে আমরা আপনার তথ্য সংগ্রহ, ব্যবহার এবং সুরক্ষা করি।</p>
+            
+            <h2>1. Information We Collect</h2>
+            <p>আপনি যখন আমাদের ওয়েবসাইট ব্যবহার করেন, অর্ডার করেন অথবা আমাদের সাথে যোগাযোগ করেন, তখন আমরা প্রয়োজনীয় কিছু তথ্য সংগ্রহ করতে পারি।</p>
+            <p><strong>আমরা যে তথ্য সংগ্রহ করতে পারি:</strong></p>
+            <ul>
+                <li>আপনার নাম</li>
+                <li>মোবাইল নম্বর</li>
+                <li>ইমেইল ঠিকানা</li>
+                <li>ডেলিভারি ঠিকানা</li>
+                <li>অর্ডারের তথ্য</li>
+                <li>আপনার দেওয়া অন্যান্য প্রয়োজনীয় তথ্য</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>আপনার তথ্য আমরা শুধুমাত্র প্রয়োজনীয় কাজে ব্যবহার করি, যেমন:</p>
+            <ul>
+                <li>✔️ আপনার অর্ডার গ্রহণ ও প্রসেস করার জন্য</li>
+                <li>✔️ আপনার পণ্য সঠিক ঠিকানায় পৌঁছে দেওয়ার জন্য</li>
+                <li>✔️ অর্ডারের আপডেট জানাতে</li>
+                <li>✔️ Customer Support প্রদান করতে</li>
+                <li>✔️ আমাদের ওয়েবসাইট ও সার্ভিস উন্নত করতে</li>
+            </ul>
+
+            <h2>3. Protection of Your Information</h2>
+            <p>আপনার ব্যক্তিগত তথ্যের নিরাপত্তা আমাদের জন্য গুরুত্বপূর্ণ। আমরা আপনার তথ্য সুরক্ষিত রাখার জন্য প্রয়োজনীয় পদক্ষেপ গ্রহণ করি এবং অননুমোদিত ব্যবহার থেকে রক্ষা করার চেষ্টা করি।</p>
+
+            <h2>4. Sharing of Information</h2>
+            <p>আমরা আপনার ব্যক্তিগত তথ্য কোনো ব্যক্তি বা প্রতিষ্ঠানের কাছে বিক্রি, ভাড়া বা অবৈধভাবে শেয়ার করি না।</p>
+            <p>তবে আপনার অর্ডার সম্পন্ন করার জন্য প্রয়োজন হলে শুধুমাত্র প্রয়োজনীয় তথ্য ডেলিভারি সার্ভিস বা সংশ্লিষ্ট সেবাদাতার সাথে ব্যবহার করা হতে পারে।</p>
+
+            <h2>5. Cookies Policy</h2>
+            <p>আমাদের ওয়েবসাইট ব্যবহারকারীর অভিজ্ঞতা উন্নত করার জন্য Cookies ব্যবহার করতে পারে।</p>
+            <p>Cookies আপনার ব্রাউজিং অভিজ্ঞতা সহজ করতে এবং ওয়েবসাইটের কার্যক্রম উন্নত করতে সাহায্য করে।</p>
+
+            <h2>6. Order Information</h2>
+            <p>আপনার অর্ডার সম্পর্কিত তথ্য যেমন পণ্যের নাম, মূল্য এবং ডেলিভারি তথ্য সংরক্ষণ করা হতে পারে, যাতে ভবিষ্যতে আপনার অর্ডার পরিচালনা ও সেবা প্রদান করা সহজ হয়।</p>
+
+            <h2>7. Payment Information</h2>
+            <p>আমাদের ওয়েবসাইটে Cash on Delivery (COD) ও মোবাইল ব্যাংকিং সুবিধা থাকতে পারে।</p>
+            <p>আমরা আপনার কোনো গোপন পেমেন্ট তথ্য যেমন ব্যাংক কার্ডের পাসওয়ার্ড বা পিন সংরক্ষণ করি না।</p>
+
+            <h2>8. Third Party Services</h2>
+            <p>আমাদের ওয়েবসাইটে Facebook, WhatsApp বা অন্যান্য বাহ্যিক লিংক থাকতে পারে।</p>
+            <p>এই তৃতীয় পক্ষের ওয়েবসাইটগুলোর নিজস্ব Privacy Policy থাকতে পারে। তাদের সেবা ব্যবহারের ক্ষেত্রে তাদের নিজস্ব নীতিমালা প্রযোজ্য হবে।</p>
+
+            <h2>9. Your Rights</h2>
+            <p>আপনার নিজের ব্যক্তিগত তথ্য সম্পর্কে জানার, পরিবর্তন করার অথবা মুছে ফেলার অনুরোধ করার অধিকার রয়েছে।</p>
+            <p>এর জন্য আপনি আমাদের সাথে সরাসরি যোগাযোগ করতে পারেন।</p>
+
+            <h2>10. Changes to This Privacy Policy</h2>
+            <p>আমরা প্রয়োজন অনুযায়ী আমাদের Privacy Policy পরিবর্তন বা আপডেট করতে পারি।</p>
+            <p>যেকোনো পরিবর্তন এই পেজে প্রকাশ করা হবে।</p>
+
+            <h2>11. Contact Us</h2>
+            <p>Privacy Policy সম্পর্কিত যেকোনো প্রশ্ন বা তথ্যের জন্য আমাদের সাথে যোগাযোগ করতে পারেন:</p>
+            <p><strong>Top Hijab Collection</strong></p>
+            <p>আপনার গোপনীয়তা রক্ষা এবং উন্নত সেবা প্রদান করতে প্রতিশ্রুতিবদ্ধ।</p>
+            <p style="text-align: center; margin-top: 15px;" class="rgb-neon-text">✨ Elegance • Modesty • Premium Style ✨</p>
+        </div>
+    </div>
+    
+    <div id="terms-page" class="page-section">
+        <div class="page-container policy-content">
+            <h1>শর্তাবলী ও নিয়মাবলী (Terms & Conditions)</h1>
+            <p>Top Hijab Collection ওয়েবসাইটে আপনাকে স্বাগতম। আমাদের ওয়েবসাইট ব্যবহার এবং আমাদের কাছ থেকে পণ্য অর্ডার করার মাধ্যমে আপনি নিচে উল্লেখিত সকল শর্তাবলী ও নিয়ম মেনে নিতে সম্মত হচ্ছেন।</p>
+
+            <h2>১. সাধারণ তথ্য (General Information)</h2>
+            <p>Top Hijab Collection একটি অনলাইন ফ্যাশন শপ, যেখানে গ্রাহকরা উন্নত মানের Hijab Collection, Borka Collection, Abaya Collection এবং অন্যান্য ইসলামিক ফ্যাশন পণ্য ক্রয় করতে পারবেন।</p>
+            <p>আমরা গ্রাহকদের জন্য মানসম্মত পণ্য, সহজ অর্ডার ব্যবস্থা এবং নির্ভরযোগ্য ডেলিভারি সেবা প্রদান করার চেষ্টা করি।</p>
+            <p>Top Hijab Collection যেকোনো সময় আমাদের পণ্যের তথ্য, মূল্য, ডিজাইন, অফার এবং ওয়েবসাইটের নিয়ম পরিবর্তন, সংশোধন বা আপডেট করার অধিকার সংরক্ষণ করে।</p>
+
+            <h2>২. পণ্যের তথ্য (Product Information)</h2>
+            <p>আমরা আমাদের পণ্যের ছবি, রং, ডিজাইন, কাপড়ের ধরন এবং অন্যান্য তথ্য সঠিকভাবে দেওয়ার চেষ্টা করি।</p>
+            <p>তবে বিভিন্ন মোবাইল বা কম্পিউটার স্ক্রিনের কারণে পণ্যের রং বাস্তব পণ্যের তুলনায় সামান্য ভিন্ন দেখা যেতে পারে।</p>
+
+            <h2>৩. অর্ডার নীতি (Order Policy)</h2>
+            <p>পণ্য অর্ডার করার সময় গ্রাহককে সঠিক নাম, মোবাইল নাম্বার এবং সম্পূর্ণ ঠিকানা প্রদান করতে হবে।</p>
+            <p>ভুল তথ্য, ভুল ঠিকানা অথবা যোগাযোগ করা সম্ভব না হলে অর্ডার বাতিল হতে পারে।</p>
+            <p>অর্ডার নিশ্চিত হওয়ার পর প্রয়োজন অনুযায়ী পরিবর্তন বা বাতিল করার ক্ষেত্রে আমাদের নিয়ম প্রযোজ্য হবে।</p>
+
+            <h2>৪. পেমেন্ট নীতি (Payment Policy)</h2>
+            <p>Top Hijab Collection গ্রাহকদের জন্য বিভিন্ন পেমেন্ট সুবিধা প্রদান করে।</p>
+            <p><strong>আমাদের পেমেন্ট মাধ্যম:</strong></p>
+            <ul>
+                <li>bKash</li>
+                <li>Nagad</li>
+                <li>Upay</li>
+                <li>Cash on Delivery (COD)</li>
+            </ul>
+
+            <h2>৫. ক্যাশ অন ডেলিভারি নীতি (Cash on Delivery Policy)</h2>
+            <p>আমরা Cash on Delivery সুবিধা প্রদান করি।</p>
+            <p>তবে অর্ডার নিশ্চিত করার জন্য ডেলিভারি চার্জ অগ্রিম প্রদান করতে হবে।</p>
+            <p>গ্রাহক পণ্য হাতে পাওয়ার পর পণ্য দেখে যাচাই করে শুধুমাত্র পণ্যের মূল্য পরিশোধ করবেন।</p>
+            <p>ডেলিভারি চার্জ আগে প্রদান করা হবে এবং পণ্যের মূল্যের সাথে এটি অন্তর্ভুক্ত থাকবে না।</p>
+            <p>গ্রাহকের ভুল তথ্য, অর্ডার গ্রহণ না করা বা অপ্রয়োজনীয় রিটার্নের কারণে ডেলিভারি চার্জ ফেরতযোগ্য নাও হতে পারে।</p>
+
+            <h2>৬. ডেলিভারি নীতি (Delivery Policy)</h2>
+            <p>আমরা দ্রুত এবং নিরাপদভাবে গ্রাহকের কাছে পণ্য পৌঁছে দেওয়ার চেষ্টা করি।</p>
+            <p>ডেলিভারি সময় গ্রাহকের অবস্থান এবং কুরিয়ার সার্ভিসের উপর নির্ভর করতে পারে।</p>
+            <p>প্রাকৃতিক দুর্যোগ, কুরিয়ার সমস্যা বা অনাকাঙ্ক্ষিত কারণে ডেলিভারি বিলম্ব হলে Top Hijab Collection দায়ী থাকবে না।</p>
+
+            <h2>৭. রিটার্ন ও এক্সচেঞ্জ নীতি (Return & Exchange Policy)</h2>
+            <p>পণ্য গ্রহণের পর কোনো সমস্যা থাকলে নির্দিষ্ট সময়ের মধ্যে আমাদের Customer Support-এর সাথে যোগাযোগ করতে হবে।</p>
+            <p>ব্যবহৃত, ধোয়া, পরিবর্তিত বা ক্ষতিগ্রস্ত পণ্য Return বা Exchange করা যাবে না।</p>
+            <p>Return বা Exchange এর ক্ষেত্রে পণ্যের অবস্থা যাচাই করে সিদ্ধান্ত নেওয়া হবে।</p>
+
+            <h2>৮. গ্রাহকের দায়িত্ব (Customer Responsibility)</h2>
+            <p>অর্ডারের সময় সঠিক তথ্য প্রদান করা গ্রাহকের দায়িত্ব।</p>
+            <p>ডেলিভারি গ্রহণের সময় গ্রাহককে সহযোগিতা করতে হবে।</p>
+            <p>ভুল ঠিকানা, ফোন বন্ধ থাকা বা অর্ডার গ্রহণ না করার কারণে কোনো সমস্যা হলে গ্রাহক দায়ী থাকবেন।</p>
+
+            <h2>৯. গোপনীয়তা ও নিরাপত্তা (Privacy & Security)</h2>
+            <p>আমরা গ্রাহকের ব্যক্তিগত তথ্যের নিরাপত্তাকে গুরুত্ব দিয়ে থাকি।</p>
+            <p>গ্রাহকের তথ্য শুধুমাত্র অর্ডার প্রসেসিং, ডেলিভারি এবং Customer Support-এর প্রয়োজনে ব্যবহার করা হবে।</p>
+            <p>গ্রাহকের তথ্য কোনো অননুমোদিত তৃতীয় পক্ষের কাছে প্রদান করা হবে না।</p>
+
+            <h2>১০. যোগাযোগ (Contact Information)</h2>
+            <p>যেকোনো প্রশ্ন, অভিযোগ বা সহযোগিতার জন্য আমাদের সাথে যোগাযোগ করুন:</p>
+            <p><strong>Customer Support:</strong> 01765500211</p>
+            <p><strong>WhatsApp:</strong> 01765500211</p>
+            <p><strong>Email:</strong> tophijab5840@gmail.com</p>
+            <p><strong>Facebook Page:</strong> Top Hijab Collection</p>
+
+            <p style="text-align: center; margin-top: 20px;">Top Hijab Collection-এর সাথে কেনাকাটা করার জন্য ধন্যবাদ।<br>আমরা সবসময় আপনাকে সেরা সেবা দেওয়ার চেষ্টা করি।</p>
+        </div>
+    </div>
+    
+    <div id="return-page" class="page-section">
+        <div class="page-container policy-content">
+            <h1>রিটার্ন নীতি (Return Policy)</h1>
+            <p>Top Hijab Collection-এ আমরা গ্রাহকদের সন্তুষ্টিকে সর্বোচ্চ গুরুত্ব দিয়ে থাকি। আমাদের পণ্য ভালোভাবে যাচাই করে পাঠানো হয়, তবুও কোনো অনাকাঙ্ক্ষিত সমস্যা হলে নিচের নিয়ম অনুযায়ী Return ও Exchange সুবিধা প্রদান করা হবে।</p>
+
+            <h2>১. রিটার্নের শর্ত (Return Conditions)</h2>
+            <ul>
+                <li>পণ্য গ্রহণের পর কোনো সমস্যা থাকলে অবশ্যই ২৪ ঘণ্টার মধ্যে আমাদের Customer Support-এর সাথে যোগাযোগ করতে হবে।</li>
+                <li>পণ্য অবশ্যই ব্যবহার না করা, ধোয়া না হওয়া এবং সম্পূর্ণ নতুন অবস্থায় থাকতে হবে।</li>
+                <li>পণ্যের সাথে থাকা প্যাকেজিং, ট্যাগ এবং অন্যান্য জিনিস অক্ষত থাকতে হবে।</li>
+                <li>ব্যবহৃত, পরিবর্তিত, ক্ষতিগ্রস্ত বা ধোয়া পণ্য Return করা যাবে না।</li>
+            </ul>
+
+            <h2>২. কোন ক্ষেত্রে রিটার্ন গ্রহণ করা হবে</h2>
+            <p>নিচের সমস্যাগুলোর ক্ষেত্রে Return বা Exchange বিবেচনা করা হবে:</p>
+            <ul>
+                <li>ভুল পণ্য পাঠানো হলে।</li>
+                <li>পণ্য ত্রুটিপূর্ণ বা ক্ষতিগ্রস্ত অবস্থায় পৌঁছালে।</li>
+                <li>অর্ডারের সাথে পণ্যের মিল না থাকলে।</li>
+            </ul>
+
+            <h2>৩. কোন ক্ষেত্রে রিটার্ন গ্রহণ করা হবে না</h2>
+            <p>নিচের ক্ষেত্রে Return বা Exchange প্রযোজ্য হবে না:</p>
+            <ul>
+                <li>শুধুমাত্র পছন্দ পরিবর্তন হলে।</li>
+                <li>রং বা ডিজাইন ব্যক্তিগত পছন্দ অনুযায়ী না হলে।</li>
+                <li>ব্যবহার করা বা ধোয়া পণ্য হলে।</li>
+                <li>গ্রাহকের ভুল তথ্যের কারণে সমস্যা হলে।</li>
+            </ul>
+
+            <h2>৪. ডেলিভারি চার্জ নীতি</h2>
+            <p>Cash on Delivery অর্ডারের ক্ষেত্রে ডেলিভারি চার্জ অগ্রিম নেওয়া হতে পারে।</p>
+            <p>পণ্য গ্রহণের পর গ্রাহক পণ্য দেখে যাচাই করে পণ্যের মূল্য পরিশোধ করবেন।</p>
+            <p>ডেলিভারি চার্জ সাধারণত ফেরতযোগ্য নয়।</p>
+
+            <h2>৫. এক্সচেঞ্জ নীতি (Exchange Policy)</h2>
+            <p>পণ্যের সমস্যা থাকলে এবং আমাদের নীতিমালার মধ্যে পড়লে Exchange সুবিধা দেওয়া হতে পারে।</p>
+            <p>Exchange-এর ক্ষেত্রে পণ্যের প্রাপ্যতা এবং শর্ত প্রযোজ্য হবে।</p>
+
+            <h2>৬. রিফান্ড নীতি (Refund Policy)</h2>
+            <p>Return অনুমোদিত হলে রিফান্ড প্রক্রিয়া আমাদের যাচাই শেষে সম্পন্ন করা হবে।</p>
+            <p>পেমেন্ট মাধ্যম অনুযায়ী রিফান্ড সম্পন্ন হতে কিছু সময় লাগতে পারে।</p>
+
+            <h2>৭. যোগাযোগ</h2>
+            <p>Return বা Exchange সংক্রান্ত যেকোনো সমস্যার জন্য যোগাযোগ করুন:</p>
+            <p><strong>Customer Support:</strong> 01765500211</p>
+            <p><strong>WhatsApp:</strong> 01765500211</p>
+            <p><strong>Email:</strong> tophijab5840@gmail.com</p>
+            <p style="text-align: center; margin-top: 15px;" class="rgb-neon-text">Top Hijab Collection সবসময় গ্রাহকদের জন্য সুন্দর ও নির্ভরযোগ্য কেনাকাটার অভিজ্ঞতা নিশ্চিত করার চেষ্টা করে।</p>
+        </div>
+    </div>
+    
+    <div id="contact-page" class="page-section">
+        <div class="page-container policy-content">
+            <h1>যোগাযোগ করুন</h1>
+            <p>Top Hijab Collection-এ আপনাকে আন্তরিক স্বাগতম।</p>
+            <p>আমরা বিশ্বাস করি, সুন্দর পোশাকের সাথে ভালো সেবা ও বিশ্বাসের সম্পর্ক সবচেয়ে গুরুত্বপূর্ণ। আপনার পছন্দের Hijab, Borka এবং Abaya Collection সম্পর্কে জানতে, অর্ডার করতে অথবা যেকোনো সহযোগিতার জন্য আমাদের সাথে যোগাযোগ করুন।</p>
+            <p>আমাদের অভিজ্ঞ Customer Support Team সবসময় আপনার সেবায় প্রস্তুত।</p>
+            
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 20px 0;">
+
+            <h2>আমাদের ঠিকানা:</h2>
+            <p>📍 <strong>Top Hijab Collection</strong><br>
+            ফেনী সওদাগর পট্টি,<br>
+            সওদাগর টাওয়ারের তৃতীয় তলা,<br>
+            ফেনী, বাংলাদেশ।</p>
+
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 20px 0;">
+
+            <h2>যোগাযোগের মাধ্যম:</h2>
+            <p>📞 <strong>Customer Support:</strong><br>01765500211</p>
+            <p>💬 <strong>WhatsApp:</strong><br>01765500211</p>
+            <p>📧 <strong>Email:</strong><br>tophijab5840@gmail.com</p>
+            <p>📘 <strong>Facebook Page:</strong><br><a href="https://www.facebook.com/share/1CAQjPJcwd/" target="_blank">https://www.facebook.com/share/1CAQjPJcwd/</a></p>
+            <p>✈️ <strong>Telegram:</strong><br><a href="https://t.me/topHijabCollection" target="_blank">https://t.me/topHijabCollection</a></p>
+
+            <hr style="border: 0; border-top: 1px dashed var(--border-color); margin: 20px 0;">
+
+            <p>অর্ডার, পণ্য, ডেলিভারি অথবা যেকোনো প্রশ্নের জন্য আমাদের সাথে যোগাযোগ করুন। আমরা দ্রুত আপনার সমস্যার সমাধান করার চেষ্টা করবো।</p>
+            <p>আপনার আস্থা ও ভালোবাসাই আমাদের অনুপ্রেরণা।</p>
+            <p>ধন্যবাদ আমাদের সাথে থাকার জন্য।</p>
+            
+            <p style="text-align: center; margin-top: 15px;" class="rgb-neon-text"><strong>Top Hijab Collection</strong><br>Premium Hijab • Borka • Abaya Collection</p>
+        </div>
+    </div>
+
+    <a href="https://wa.me/8801765500211" target="_blank" class="floating-live-chat">
+        <i class="fa-brands fa-whatsapp"></i> Live Chat
+    </a>
+
+    <!-- FOOTER SECTION -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#" onclick="switchPage('about', event)">About Us</a></li>
+                    <li><a href="#" onclick="switchPage('privacy', event)">Privacy Policy</a></li>
+                    <li><a href="#" onclick="switchPage('terms', event)">Terms and Conditions</a></li>
+                    <li><a href="#" onclick="switchPage('return', event)">Return Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#" onclick="switchPage('contact', event)">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#" onclick="switchPage('shop', event)">Shop</a></li>
+                    <li><a href="#" onclick="switchPage('track', event)">Track Order</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 <span class="rgb-neon-text">Top Hijab Collection</span>, ফেনী. All Rights Reserved.</div>
+    </footer>
+
+    <!-- SIDEBAR MENU -->
+    <div class="sidebar-overlay" id="sidebarOverlay">
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <span style="font-weight: 600;">Menu</span>
+                <button class="close-sidebar" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <ul class="sidebar-links">
+                <li><a href="#" onclick="switchPage('home', event); closeSidebar();">Home</a></li>
+                <li><a href="#" onclick="switchPage('shop', event); closeSidebar();">Shop</a></li>
+                <li><a href="#" onclick="switchPage('track', event); closeSidebar();">Track Order</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+        <button class="nav-item active" onclick="switchPage('home', event)" id="nav-home"><i class="fa-solid fa-house"></i> Home</button>
+        <button class="nav-item" onclick="switchPage('shop', event)" id="nav-shop"><i class="fa-solid fa-bag-shopping"></i> Shop</button>
+        <button class="nav-item" onclick="switchPage('cart', event)" id="nav-cart"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+    </nav>
+
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "✨ Premium & Classy Black Borka Collection ✨",
+                price: 1000,
+                category: "Borka",
+                image: "https://i.ibb.co/rqXmh7X/file-00000000b1c8822f84947a79c3f3552b.png",
+                images: [
+                    "https://i.ibb.co/rqXmh7X/file-00000000b1c8822f84947a79c3f3552b.png",
+                    "https://i.ibb.co/rqXmh7X/file-00000000b1c8822f84947a79c3f3552b.png",
+                    "https://i.ibb.co/rqXmh7X/file-00000000b1c8822f84947a79c3f3552b.png",
+                    "https://i.ibb.co/rqXmh7X/file-00000000b1c8822f84947a79c3f3552b.png"
+                ],
+                description: `
+                    <p>✨ <strong>Premium & Classy Black Borka Collection</strong> ✨</p>
+                    <p>অভিজাত ডিজাইন এবং সর্বোচ্চ আরামের এক অপূর্ব মেলবন্ধন! আপনার দৈনন্দিন ব্যবহার কিংবা বিশেষ যেকোনো অনুষ্ঠানের জন্য এই বোরকাটি একটি পারফেক্ট চয়েস।</p>
+                    <br>
+                    <strong>Product Highlights & Features:</strong>
+                    <ul style="margin-left: 20px; font-size: 13px; line-height: 1.8;">
+                        <li><strong>Premium Fabric:</strong> উন্নত মানের সফট ও ব্রিদেবল চেরি ফ্যাব্রিক (Cherry Fabric), যা দীর্ঘ সময় পরতেও অত্যন্ত আরামদায়ক।</li>
+                        <li><strong>Exclusive Embroidery:</strong> বোরকার সামনের অংশ, গলা এবং হাতায় সূক্ষ্ম ও প্রিমিয়াম এম্ব্রয়ডারি ওয়ার্ক করা হয়েছে।</li>
+                        <li><strong>Button Detail:</strong> ফ্রন্টে স্টাইলিশ বাটন ডিটেইলিং, যা লুককে আরও মার্জিত করে তোলে।</li>
+                        <li><strong>Flowy & Comfortable Fit:</strong> লুজ এবং ফ্লোয়ি কাটিং, যা চমৎকার ফল (fall) দেয় এবং পরতে রিল্যাক্সড ফিল হয়।</li>
+                        <li><strong>Durable Quality:</strong> হাই-কোয়ালিটি স্টিচিং এবং দীর্ঘস্থায়ী কালার গ্যারান্টি।</li>
+                    </ul>
+                    <br>
+                    <strong>Product Details:</strong>
+                    <ul style="margin-left: 20px; font-size: 13px; line-height: 1.8;">
+                        <li><strong>Color:</strong> Jet Black</li>
+                        <li><strong>Available Sizes:</strong> 50, 52, 54, 56</li>
+                        <li><strong>Price:</strong> ৳১,০০০ (1000 TK)</li>
+                        <li><strong>Brand:</strong> Top Hijab Collection</li>
+                    </ul>
+                `
+            },
+            {
+                id: 2,
+                name: "✨ প্রিমিয়াম Dubai Cherry Abaya ✨",
+                price: null,
+                category: "Abaya",
+                image: "https://i.ibb.co/kg8PgZfW/file-000000007a2882109deb55fe2ddf7cd4.png",
+                images: [
+                    "https://i.ibb.co/kg8PgZfW/file-000000007a2882109deb55fe2ddf7cd4.png",
+                    "https://i.ibb.co/kg8PgZfW/file-000000007a2882109deb55fe2ddf7cd4.png",
+                    "https://i.ibb.co/kg8PgZfW/file-000000007a2882109deb55fe2ddf7cd4.png",
+                    "https://i.ibb.co/kg8PgZfW/file-000000007a2882109deb55fe2ddf7cd4.png"
+                ],
+                description: `
+                    <p>✨ <strong>প্রিমিয়াম Dubai Cherry Abaya</strong> ✨</p>
+                    <p>রুচিশীলতা, সৌন্দর্য আর আরামের নিখুঁত সমন্বয়—প্রিমিয়াম Dubai Cherry কাপড়ের তৈরি আমাদের সুন্দর আবায়া। 🖤</p>
+                    <p>উন্নতমানের Dubai Cherry Fabric দিয়ে তৈরি এই আবায়াটি দেখতে যেমন আকর্ষণীয়, পরতেও তেমনি আরামদায়ক। কাপড়ের সুন্দর ফিনিশিং ও এলিগ্যান্ট লুক আপনাকে দেবে একটি স্মার্ট, পরিপাটি ও প্রিমিয়াম উপস্থিতি।</p>
+                    <br>
+                    <strong>🌸 প্রোডাক্টের বিশেষত্ব:</strong>
+                    <ul style="margin-left: 20px; font-size: 13px; line-height: 1.8;">
+                        <li>✨ Premium Dubai Cherry Fabric</li>
+                        <li>🖤 Elegant & Modest Look</li>
+                        <li>🌿 আরামদায়ক ও সুন্দর ফিটিং</li>
+                        <li>💎 উন্নতমানের ফিনিশিং</li>
+                        <li>👗 দৈনন্দিন ব্যবহার ও বিশেষ অনুষ্ঠানের জন্য উপযোগী</li>
+                        <li>📏 Available Sizes: 50, 52, 54, 56</li>
+                        <li>🔄 সুন্দর ও মার্জিত ডিজাইন—যা আপনাকে দেবে প্রিমিয়াম লুক</li>
+                    </ul>
+                    <br>
+                    <p>Top Hijab Collection থেকে আপনার পছন্দের আবায়া বেছে নিন এবং আপনার পর্দার সৌন্দর্যকে আরও আকর্ষণীয় করে তুলুন। 🤍</p>
+                    <p>📦 <strong>অর্ডার করতে এখনই যোগাযোগ করুন।</strong></p>
+                    <p>Top Hijab Collection — Elegance in Every Layer. ✨</p>
+                `
+            },
+            {
+                id: 3,
+                name: "✨ Premium Dubai Cherry Abaya — New Collection ✨",
+                price: null,
+                category: "Abaya",
+                image: "https://i.ibb.co/5WKkcG9H/file-000000009b908243b1470d2cb97a5692.png",
+                images: [
+                    "https://i.ibb.co/5WKkcG9H/file-000000009b908243b1470d2cb97a5692.png",
+                    "https://i.ibb.co/0py3qNbT/file-0000000079548210a1ca1e2e6e549331.png",
+                    "https://i.ibb.co/FbywpqG5/file-00000000caf881f4957b5b0c8f0e6104.png",
+                    "https://i.ibb.co/QvKFLCxc/file-000000001b2881f487188955d35f777c.png"
+                ],
+                description: `
+                    <p>✨ <strong>Premium Dubai Cherry Abaya — New Collection</strong> ✨</p>
+                    <p>রুচিশীলতা, আরাম ও আধুনিক ডিজাইনের সুন্দর সমন্বয়—আমাদের Premium Dubai Cherry Abaya। একই ডিজাইনের এই আবায়াটি বিভিন্ন আকর্ষণীয় কালারে পাওয়া যাচ্ছে, তাই আপনার পছন্দের কালারটি সহজেই বেছে নিতে পারবেন। 🖤🤎🌿🌸</p>
+                    <br>
+                    <strong>🌸 প্রোডাক্টের বিশেষত্ব:</strong>
+                    <ul style="margin-left: 20px; font-size: 13px; line-height: 1.8;">
+                        <li>✨ Premium Dubai Cherry Fabric</li>
+                        <li>💎 Elegant & Stylish Design</li>
+                        <li>🌿 Soft, Smooth & Comfortable Fabric</li>
+                        <li>👗 সুন্দর Flowing & Full-Length Design</li>
+                        <li>✨ Stylish Neck Design</li>
+                        <li>🌸 Elastic Sleeve Cuff</li>
+                        <li>💫 Elegant Layered / Pleated Detailing</li>
+                        <li>🤍 আরামদায়ক ও Relaxed Fit</li>
+                        <li>🌙 দৈনন্দিন ব্যবহার ও বিশেষ অনুষ্ঠানের জন্য উপযোগী</li>
+                    </ul>
+                    <br>
+                    <strong>🎨 Available Colors:</strong>
+                    <ul style="margin-left: 20px; font-size: 13px; line-height: 1.8;">
+                        <li>Classic Black 🖤</li>
+                        <li>Deep Green 🌿</li>
+                        <li>Olive Green 💚</li>
+                        <li>Mauve 🌸</li>
+                        <li>আরও বিভিন্ন আকর্ষণীয় কালার</li>
+                    </ul>
+                    <br>
+                    <strong>📏 Available Sizes:</strong> 50 | 52 | 54 | 56<br>
+                    <strong>🧵 Fabric:</strong> Premium Dubai Cherry<br><br>
+                    <p>একই সুন্দর ডিজাইন—আপনার পছন্দের কালারে。<br>Top Hijab Collection-এর Premium Dubai Cherry Abaya আপনার modest fashion-এ যোগ করবে একটি মার্জিত ও প্রিমিয়াম লুক। ✨</p>
+                    <br>
+                    <p>📦 <strong>অর্ডার করতে এখনই যোগাযোগ করুন।</strong></p>
+                    <p>Top Hijab Collection<br>✨ Elegance in Every Layer ✨</p>
+                `
+            },
+            {
+                id: 4,
+                name: "✨ Premium Dubai Cherry Abaya (Deep Green) ✨",
+                price: 1800,
+                category: "Abaya",
+                image: "https://i.ibb.co/8Lj8QD92/file-00000000eee881f4942ae36084244a6a.png",
+                images: [
+                    "https://i.ibb.co/8Lj8QD92/file-00000000eee881f4942ae36084244a6a.png",
+                    "https://i.ibb.co/8Lj8QD92/file-00000000eee881f4942ae36084244a6a.png",
+                    "https://i.ibb.co/8Lj8QD92/file-00000000eee881f4942ae36084244a6a.png",
+                    "https://i.ibb.co/8Lj8QD92/file-00000000eee881f4942ae36084244a6a.png"
+                ],
+                description: `
+                    <p>✨ <strong>Premium Dubai Cherry Abaya</strong> ✨</p>
+                    <p>রুচিশীলতা, সৌন্দর্য ও আরামের নিখুঁত সমন্বয়ে তৈরি আমাদের Premium Dubai Cherry Abaya। 💚</p>
+                    <p>সিম্পল কিন্তু এলিগ্যান্ট ডিজাইনের এই আবায়াটি আপনাকে দেবে একটি মার্জিত ও প্রিমিয়াম লুক। সুন্দর ফ্লোয়িং ডিজাইন, আরামদায়ক ফিট এবং আকর্ষণীয় ফিনিশিং—দৈনন্দিন ব্যবহার থেকে শুরু করে বিশেষ অনুষ্ঠানেও মানিয়ে যাবে অনায়াসে।</p>
+                    <br>
+                    <strong>🌸 প্রোডাক্টের বিশেষত্ব:</strong>
+                    <ul style="margin-left: 20px; font-size: 13px; line-height: 1.8;">
+                        <li>✨ Premium Dubai Cherry Fabric</li>
+                        <li>💚 Elegant & Modest Design</li>
+                        <li>🌿 Soft & Comfortable Feel</li>
+                        <li>💎 সুন্দর ও পরিপাটি ফিনিশিং</li>
+                        <li>👗 Stylish Flowing Design</li>
+                        <li>🖤 দৈনন্দিন ব্যবহার ও বিশেষ অনুষ্ঠানের জন্য উপযোগী</li>
+                        <li>📏 Available Sizes: 50, 52, 54, 56</li>
+                    </ul>
+                    <br>
+                    <strong>🎨 Color:</strong><br>
+                    Deep Green<br><br>
+                    <strong>💰 Price:</strong> ৳1800<br><br>
+                    <p>Top Hijab Collection থেকে আপনার পছন্দের রঙ ও সাইজ বেছে নিন এবং আপনার লুককে দিন আরও মার্জিত ও প্রিমিয়াম একটি সৌন্দর্য। ✨</p>
+                    <br>
+                    <p>📦 <strong>অর্ডার করতে এখনই যোগাযোগ করুন।</strong></p>
+                    <p>Top Hijab Collection<br>Elegance in Every Layer. 🤍</p>
+                `
+            }
+        ];
+
+        function renderProducts(containerId, itemsToRender) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = "";
+            itemsToRender.forEach(product => {
+                let priceHtml = (product.category === 'Abaya' && product.price === null) ? '' : `<div class="product-price">৳${product.price}</div>`;
+                container.innerHTML += `
+                    <div class="product-card" onclick="viewProductDetail(${product.id})">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="product-info">
+                            <h4>${product.name}</h4>
+                            ${priceHtml}
+                            <button class="add-to-cart-btn" onclick="event.stopPropagation(); addToCart(${product.id})">Add to Cart</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function viewProductDetail(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            let imgList = product.images && product.images.length >= 4 ? product.images : [product.image, product.image, product.image, product.image];
+            let detailPriceHtml = (product.category === 'Abaya' && product.price === null) ? '' : `<div class="product-detail-price">৳${product.price}</div>`;
+
+            const detailContent = document.getElementById('product-detail-content');
+            detailContent.innerHTML = `
+                <!-- ছবি এবং জুম ইফেক্ট সেকশন -->
+                <div class="product-image-grid">
+                    <img src="${imgList[0]}" alt="${product.name} 1" onclick="openImageZoom(this.src)">
+                    <img src="${imgList[1]}" alt="${product.name} 2" onclick="openImageZoom(this.src)">
+                    <img src="${imgList[2]}" alt="${product.name} 3" onclick="openImageZoom(this.src)">
+                    <img src="${imgList[3]}" alt="${product.name} 4" onclick="openImageZoom(this.src)">
+                </div>
+
+                <div class="product-detail-info">
+                    <h1>${product.name}</h1>
+                    ${detailPriceHtml}
+                    <div class="product-detail-desc">${product.description}</div>
+                    <button class="account-btn" onclick="addToCart(${product.id})" style="margin-top: 10px;">Add to Cart</button>
+                </div>
+            `;
+            switchPage('product-detail', null);
+        }
+
+        const imageZoomModal = document.getElementById("imageZoomModal");
+        const zoomedModalImg = document.getElementById("zoomedModalImg");
+        const closeImageModalBtn = document.getElementById("closeImageModal");
+
+        function openImageZoom(imgSrc) {
+            imageZoomModal.style.display = "block";
+            zoomedModalImg.src = imgSrc;
+        }
+
+        if (closeImageModalBtn) {
+            closeImageModalBtn.onclick = function() {
+                imageZoomModal.style.display = "none";
+            }
+        }
+
+        if (imageZoomModal) {
+            imageZoomModal.onclick = function(event) {
+                if (event.target === imageZoomModal) {
+                    imageZoomModal.style.display = "none";
+                }
+            }
+        }
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                let itemPrice = product.price !== null ? product.price : 0;
+                const existingIndex = cartItems.findIndex(item => item.id === productId);
+                if (existingIndex > -1) {
+                    cartItems[existingIndex].quantity += 1;
+                } else {
+                    cartItems.push({ ...product, price: itemPrice, quantity: 1 });
+                }
+                localStorage.setItem('cart_items', JSON.stringify(cartItems));
+                updateCartBadge();
+                showCustomModal('Cart Added', `${product.name} has been added to your cart!`, true);
+            }
+        }
+
+        let cartItems = JSON.parse(localStorage.getItem('cart_items')) || [];
+
+        function updateCartBadge() {
+            const totalCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            const badgeEl = document.getElementById('cartBadgeCount');
+            if (badgeEl) badgeEl.innerText = totalCount;
+        }
+
+        function handleShippingChange() {
+            renderCartItems();
+            handlePaymentMethodChange();
+        }
+
+        function renderCartItems() {
+            const container = document.getElementById('cart-items-container');
+            const checkoutSection = document.getElementById('checkout-section');
+            const subtotalEl = document.getElementById('cart-subtotal-price');
+            const shippingEl = document.getElementById('cart-shipping-price');
+            const totalEl = document.getElementById('cart-total-price');
+            const payableNowEl = document.getElementById('payable-now-amount');
+            const payableLaterEl = document.getElementById('payable-later-amount');
+
+            if (!container) return;
+
+            if (cartItems.length === 0) {
+                container.innerHTML = `<p style="color: #717784; font-size: 14px; text-align: center;">Your cart is empty.</p>`;
+                if (checkoutSection) checkoutSection.style.display = 'none';
+                return;
+            }
+
+            container.innerHTML = "";
+            let subtotal = 0;
+            cartItems.forEach((item, index) => {
+                subtotal += item.price * item.quantity;
+                container.innerHTML += `
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border-color); font-size: 13px;">
+                        <div style="flex: 2;">
+                            <strong>${item.name}</strong><br>
+                            <span style="color: var(--gold-color);">৳${item.price} x ${item.quantity}</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 6px; flex: 1; justify-content: center;">
+                            <button type="button" onclick="changeQuantity(${index}, -1)" style="background: var(--search-bg); border: 1px solid var(--border-color); width: 24px; height: 24px; border-radius: 4px; cursor: pointer;">-</button>
+                            <span>${item.quantity}</span>
+                            <button type="button" onclick="changeQuantity(${index}, 1)" style="background: var(--search-bg); border: 1px solid var(--border-color); width: 24px; height: 24px; border-radius: 4px; cursor: pointer;">+</button>
+                        </div>
+                        <div style="text-align: right; flex: 1;">
+                            <span style="font-weight: 600;">৳${item.price * item.quantity}</span><br>
+                            <button type="button" onclick="removeItem(${index})" style="background: none; color: #ff4d4d; border: none; cursor: pointer; font-size: 11px;">Remove</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            const shippingSelect = document.getElementById('shipping-area');
+            const shippingCost = shippingSelect ? parseInt(shippingSelect.value) || 60 : 60;
+            const total = subtotal + shippingCost;
+
+            if (subtotalEl) subtotalEl.innerText = `৳${subtotal}`;
+            if (shippingEl) shippingEl.innerText = `৳${shippingCost}`;
+            if (totalEl) totalEl.innerText = `৳${total}`;
+
+            const paymentMethod = document.getElementById('payment-method') ? document.getElementById('payment-method').value : 'Cash on Delivery';
+            if (paymentMethod === 'Cash on Delivery') {
+                if (payableNowEl) payableNowEl.innerText = `৳${shippingCost} (Advance Delivery Charge)`;
+                if (payableLaterEl) payableLaterEl.innerText = `৳${subtotal} (Due Cash on Delivery)`;
+            } else {
+                if (payableNowEl) payableNowEl.innerText = `৳${total} (Full Advance Payment)`;
+                if (payableLaterEl) payableLaterEl.innerText = `৳0`;
+            }
+
+            if (checkoutSection) checkoutSection.style.display = 'block';
+        }
+
+        function changeQuantity(index, amount) {
+            cartItems[index].quantity += amount;
+            if (cartItems[index].quantity <= 0) cartItems.splice(index, 1);
+            localStorage.setItem('cart_items', JSON.stringify(cartItems));
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function removeItem(index) {
+            cartItems.splice(index, 1);
+            localStorage.setItem('cart_items', JSON.stringify(cartItems));
+            updateCartBadge();
+            renderCartItems();
+        }
+
+        function selectPaymentMethod(methodName, cardElement) {
+            document.getElementById('payment-method').value = methodName;
+            
+            document.querySelectorAll('.payment-option-card').forEach(card => {
+                card.classList.remove('selected');
+                card.querySelector('input[type="radio"]').checked = false;
+            });
+
+            cardElement.classList.add('selected');
+            cardElement.querySelector('input[type="radio"]').checked = true;
+
+            handlePaymentMethodChange();
+        }
+
+        function handlePaymentMethodChange() {
+            const paymentMethod = document.getElementById('payment-method').value;
+            const codBankingInfo = document.getElementById('cod-banking-info');
+            const mobileBankingInfo = document.getElementById('mobile-banking-info');
+            
+            const codSenderInput = document.getElementById('cod-sender-number');
+            const codTrxInput = document.getElementById('cod-trx-id');
+            const senderInput = document.getElementById('sender-number');
+            const trxInput = document.getElementById('trx-id');
+            
+            const shippingSelect = document.getElementById('shipping-area');
+            const shippingCost = shippingSelect ? parseInt(shippingSelect.value) || 60 : 60;
+            let subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            if (paymentMethod === 'Cash on Delivery') {
+                codBankingInfo.style.display = 'block';
+                mobileBankingInfo.style.display = 'none';
+                codSenderInput.required = true;
+                codTrxInput.required = true;
+                senderInput.required = false;
+                trxInput.required = false;
+            } else {
+                codBankingInfo.style.display = 'none';
+                mobileBankingInfo.style.display = 'block';
+                codSenderInput.required = false;
+                codTrxInput.required = false;
+                senderInput.required = true;
+                trxInput.required = true;
+                
+                const instructionText = document.getElementById('payment-instruction-text');
+                instructionText.innerHTML = `পূর্ণ পেমেন্টের জন্য দয়া করে মোট <strong>(৳${subtotal + shippingCost})</strong> নিচের নম্বরে সেন্ড করুন:`;
+            }
+            renderCartItems();
+        }
+
+        function copyCodMerchantNumber() {
+            const numberText = document.getElementById('cod-merchant-phone-num').innerText;
+            navigator.clipboard.writeText(numberText).then(() => {
+                showCustomModal('Copied!', 'বিকাশ নম্বরটি সফলভাবে কপি করা হয়েছে!', true);
+            }).catch(err => {
+                showCustomModal('Error', 'নম্বরটি কপি করা যায়নি।', false);
+            });
+        }
+
+        function copyMerchantNumber() {
+            const numberText = document.getElementById('merchant-phone-num').innerText;
+            navigator.clipboard.writeText(numberText).then(() => {
+                showCustomModal('Copied!', 'নম্বরটি সফলভাবে কপি করা হয়েছে!', true);
+            }).catch(err => {
+                showCustomModal('Error', 'নম্বরটি কপি করা যায়নি।', false);
+            });
+        }
+
+        function openBkashPopup() {
+            const shippingSelect = document.getElementById('shipping-area');
+            const shippingCost = shippingSelect ? parseInt(shippingSelect.value) || 60 : 60;
+            showCustomModal('বিকাশ পেমেন্ট নিয়ম', `ডেলিভারি চার্জ আগে দিতে হবে। পন্যর মূল্য আপনি পন্য সরাসরি দেখে তারপর টাকা দিবেন। ডেলিভারি চার্জ দিবেন আমাদের বিকাশ নাম্বার এ (৳${shippingCost})। বিকাশ নম্বর: 01765500211 (Personal)।`, true);
+        }
+
+        function proceedToCheckout(e) {
+            e.preventDefault();
+            const name = document.getElementById('checkout-name').value;
+            const phone = document.getElementById('checkout-phone').value;
+            const city = document.getElementById('checkout-city').value;
+            const zila = document.getElementById('checkout-zila').value;
+            const postcode = document.getElementById('checkout-postcode').value;
+            const notes = document.getElementById('checkout-notes').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+            const shippingSelect = document.getElementById('shipping-area');
+            const shippingCost = shippingSelect ? parseInt(shippingSelect.value) || 60 : 60;
+            const shippingAreaText = shippingSelect.options[shippingSelect.selectedIndex].text;
+
+            if (!name || !phone || !city || !zila) {
+                showCustomModal('Error', 'দয়া করে প্রয়োজনীয় ফিল্ডগুলো পূরণ করুন!', false);
+                return;
+            }
+
+            let senderNumber = "N/A";
+            let trxId = "N/A";
+
+            if (paymentMethod === 'Cash on Delivery') {
+                senderNumber = document.getElementById('cod-sender-number').value;
+                trxId = document.getElementById('cod-trx-id').value;
+                if (!senderNumber || !trxId) {
+                    showCustomModal('Error', 'দয়া করে ডেলিভারি চার্জ পাঠানোর সেন্ডার নম্বর এবং ট্রানজ্যাকশন আইডি (TrxID) দিন!', false);
+                    return;
+                }
+            } else {
+                senderNumber = document.getElementById('sender-number').value;
+                trxId = document.getElementById('trx-id').value;
+                if (!senderNumber || !trxId) {
+                    showCustomModal('Error', 'দয়া করে সেন্ডার নম্বর এবং ট্রানজ্যাকশন আইডি (TrxID) দিন!', false);
+                    return;
+                }
+            }
+
+            let subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            let totalAmount = subtotal + shippingCost;
+            let paidNow = paymentMethod === 'Cash on Delivery' ? shippingCost : totalAmount;
+            let dueAmount = paymentMethod === 'Cash on Delivery' ? subtotal : 0;
+
+            let productsText = "";
+            cartItems.forEach((item, index) => {
+                productsText += `${index + 1}. ${item.name}\n   - Qty: ${item.quantity}\n   - Price: ৳${item.price * item.quantity}\n`;
+            });
+
+            let whatsappMessage = `*New Order Received!* 🛍️\n\n` +
+                `*Customer Details:*\n` +
+                `👤 Name: ${name}\n` +
+                `📞 Phone: ${phone}\n` +
+                `🏙️ City: ${city}\n` +
+                `📍 Zila: ${zila}\n` +
+                (postcode ? `📮 Post Code: ${postcode}\n` : ``) +
+                (notes ? `📝 Notes: ${notes}\n` : ``) + `\n` +
+                `*Product Details:*\n${productsText}\n` +
+                `*Shipping & Payment:*\n` +
+                `🚚 Area: ${shippingAreaText} (৳${shippingCost})\n` +
+                `💰 Subtotal: ৳${subtotal}\n` +
+                `💵 Total Amount: ৳${totalAmount}\n` +
+                `💳 Payment Method: ${paymentMethod}\n` +
+                (paymentMethod === 'Cash on Delivery' ? `💸 Paid Delivery Charge: ৳${shippingCost}\n📱 Sender No: ${senderNumber}\n🔑 TrxID: ${trxId}\n📦 Due on Delivery (Product Price): ৳${dueAmount}\n` : `💸 Paid Now (Full): ৳${paidNow}\n📱 Sender No: ${senderNumber}\n🔑 TrxID: ${trxId}\n`);
+
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappUrl = `https://wa.me/8801765500211?text=${encodedMessage}`;
+
+            cartItems = [];
+            localStorage.removeItem('cart_items');
+            updateCartBadge();
+            
+            window.open(whatsappUrl, '_blank');
+
+            renderCartItems();
+            document.getElementById('checkout-form').reset();
+            handlePaymentMethodChange();
+            switchPage('home', null);
+        }
+
+        function filterShopCategory(categoryName) {
+            switchPage('shop', null);
+            const titleEl = document.getElementById('shop-page-title');
+            if (categoryName === 'All') {
+                titleEl.innerText = "All Products 🛍️";
+                renderProducts('shop-products-grid', products);
+            } else {
+                titleEl.innerText = `${categoryName} Collection 🌸`;
+                renderProducts('shop-products-grid', products.filter(p => p.category === categoryName));
+            }
+        }
+
+        const openMenuBtn = document.getElementById('openMenu');
+        const closeMenuBtn = document.getElementById('closeMenu');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+        if (openMenuBtn) openMenuBtn.addEventListener('click', () => sidebarOverlay.classList.add('active'));
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', () => closeSidebar());
+        if (sidebarOverlay) sidebarOverlay.addEventListener('click', (e) => { if (e.target === sidebarOverlay) closeSidebar(); });
+        function closeSidebar() { if (sidebarOverlay) sidebarOverlay.classList.remove('active'); }
+
+        function switchPage(pageId, event) {
+            if(event) event.preventDefault();
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.bottom-nav .nav-item').forEach(nav => nav.classList.remove('active'));
+
+            if(pageId === 'home') {
+                document.getElementById('home-page').classList.add('active');
+                document.getElementById('nav-home').classList.add('active');
+            } else if(pageId === 'shop') {
+                document.getElementById('shop-page').classList.add('active');
+                document.getElementById('nav-shop').classList.add('active');
+                renderProducts('shop-products-grid', products);
+            } else if(pageId === 'product-detail') {
+                document.getElementById('product-detail-page').classList.add('active');
+            } else if(pageId === 'cart') {
+                document.getElementById('cart-page').classList.add('active');
+                document.getElementById('nav-cart').classList.add('active');
+                renderCartItems();
+            } else if(pageId === 'track') {
+                document.getElementById('track-page').classList.add('active');
+            } else {
+                const targetSec = document.getElementById(pageId + '-page');
+                if(targetSec) targetSec.classList.add('active');
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function showCustomModal(title, message, isSuccess = true) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalMessage').innerText = message;
+            const icon = document.getElementById('modalIcon');
+            if (isSuccess) {
+                icon.className = "fa-solid fa-circle-check";
+                icon.style.color = "var(--gold-color)";
+            } else {
+                icon.className = "fa-solid fa-circle-exclamation";
+                icon.style.color = "#e53e3e";
+            }
+            document.getElementById('customModalOverlay').classList.add('active');
+        }
+
+        function closeCustomModal() {
+            document.getElementById('customModalOverlay').classList.remove('active');
+        }
+
+        function handleLiveSearch(query) {
+            const resultsContainer = document.getElementById('live-search-results-container');
+            if (query.trim() === '') {
+                resultsContainer.style.display = 'none';
+                return;
+            }
+            const filtered = products.filter(p => p.name.toLowerCase().includes(query.toLowerCase()) || p.category.toLowerCase().includes(query.toLowerCase()));
+            resultsContainer.style.display = 'block';
+            renderProducts('live-search-grid', filtered);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            updateCartBadge();
+            renderCartItems();
+            renderProducts('home-products-grid', products);
+            renderProducts('shop-products-grid', products);
+            handlePaymentMethodChange();
+        });
+
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                if (htmlElement.getAttribute('data-theme') === 'dark') {
+                    htmlElement.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                    themeIcon.classList.replace('fa-sun', 'fa-moon');
+                } else {
+                    htmlElement.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeIcon.classList.replace('fa-moon', 'fa-sun');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
